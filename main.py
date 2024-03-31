@@ -71,7 +71,7 @@ def abilitiess(hero_name):
             "description": "Šťastie je dôležité pre kritický útok"
         }
     }
-    print("These are your abilities:")
+    print(f"{hero_name}, These are your abilities:\n")
     for ability, details in abilities.items():
         print(f"{ability}: {details['points']} points")
 
