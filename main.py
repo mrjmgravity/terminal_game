@@ -1,5 +1,6 @@
 def main():
     intro()
+    set_nickname()
 
 
 def intro():
@@ -24,6 +25,21 @@ def intro():
                 print("Wrong choose")
         except ValueError:
             print("Invalid answer")
+
+
+def set_nickname():
+    while True:
+        hero_name = input("Choose nickname for your hero: ")
+        print("Accept the nickname or edit:")
+        print("0 - Edit nickname\n1 - Accept nickname\n")
+        choice = input()
+        if choice == "0":
+            continue
+        elif choice == "1":
+            print(f"Hero name is {hero_name}")
+            break
+        else:
+            print("Wrong choice")
 
 
 main()
