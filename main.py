@@ -1,6 +1,7 @@
 def main():
     intro()
-    set_nickname()
+    hero_name = set_nickname()
+    abilitiess(hero_name)
 
 
 def intro():
@@ -36,10 +37,43 @@ def set_nickname():
         if choice == "0":
             continue
         elif choice == "1":
-            print(f"Hero name is {hero_name}")
-            break
+            print(f"Hello {hero_name}!")
+            return hero_name
         else:
             print("Wrong choice")
+        return None
+
+
+def abilitiess(hero_name):
+    abilities = {
+        "Útočná sila": {
+            "points": 1,
+            "description": "Sila je potrebna k útoku, do ktorého okrem sily vstupuje aj obratnosť a skill."
+        },
+        "Obrana": {
+            "points": 1,
+            "description": "Celkový obrana sa ráta z bodov obrany + obratnosti."
+        },
+        "Obratnosť": {
+            "points": 1,
+            "description": "Obratnosť je dôležitá aj pre obranu aj pre útok."
+        },
+        "Skill": {
+            "points": 1,
+            "description": "SKill je dôležitý pri normálnom útoku ako aj kritickom útoku"
+        },
+        "Život": {
+            "points": 50,
+            "description": "Život je dôležitý pri bitke. Život sa dá doplniť po každom súboji."
+        },
+        "Šťastie": {
+            "points": 1,
+            "description": "Šťastie je dôležité pre kritický útok"
+        }
+    }
+    print("These are your abilities:")
+    for ability, details in abilities.items():
+        print(f"{ability}: {details['points']} points")
 
 
 main()
