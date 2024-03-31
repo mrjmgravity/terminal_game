@@ -1,4 +1,8 @@
 def main():
+    intro()
+
+
+def intro():
     print("Welcome in game Arcadius, you will battle with monsters. Are you ready?")
     print("0 - No ")
     print("1 - Im ready!\n")
