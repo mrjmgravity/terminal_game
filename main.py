@@ -18,7 +18,7 @@ def intro():
                 quit_input = int(input("What do you want to choose? "))
                 if quit_input == 0:
                     print("Goodbye")
-                    break  # Ukončení programu
+                    return  # Ukončení programu
             elif user_input == 1:
                 print("Welcome to the game!")
                 break
@@ -74,6 +74,7 @@ def abilitiess(hero_name):
     print(f"{hero_name}, These are your abilities:\n")
     for ability, details in abilities.items():
         print(f"{ability}: {details['points']} points")
+    return abilities
 
 
 main()
