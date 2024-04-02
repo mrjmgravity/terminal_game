@@ -1,3 +1,4 @@
+import sys
 def main():
     intro()
     hero_name = set_nickname()
@@ -18,7 +19,7 @@ def intro():
                 quit_input = int(input("What do you want to choose? "))
                 if quit_input == 0:
                     print("Goodbye")
-                    return  # Ukončení programu
+                    sys.exit()
             elif user_input == 1:
                 print("Welcome to the game!")
                 break
@@ -54,7 +55,7 @@ def abilitiess(hero_name):
             "points": 1,
             "description": "Celkový obrana sa ráta z bodov obrany + obratnosti."
         },
-        "Ability": {
+        "Ability Power": {
             "points": 1,
             "description": "Obratnosť je dôležitá aj pre obranu aj pre útok."
         },
